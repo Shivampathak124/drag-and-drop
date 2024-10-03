@@ -11,7 +11,7 @@ const DragDropExample = () => {
   const [dropIndicator, setDropIndicator] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/tasks")
+    fetch("https://my-json-server.typicode.com/Shivampathak124/drag-and-drop/tasks")
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);
@@ -31,7 +31,7 @@ const DragDropExample = () => {
   }, []);
 
   const updateTask = (task: Task) => {
-    fetch(`http://localhost:3000/tasks/${task.id}`, {
+    fetch(`https://my-json-server.typicode.com/Shivampathak124/drag-and-drop/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
